@@ -164,8 +164,12 @@ footer {
 @media(max-width:640px) {
 
     body {
-        font-family: Arial, Helvetica, sans-serif;
-        /* background-image: url();
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+        background: none;
+        /* font-family: Arial, Helvetica, sans-serif;
+        background-image: url(pic/duplex.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; */
@@ -251,7 +255,8 @@ footer {
 
     footer {
         background-image: url(pic/architectural\ background.jpg);
-        margin-top: 5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         color: cornsilk;
         display: flex;
         flex-direction: column;
