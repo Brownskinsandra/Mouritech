@@ -785,6 +785,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
   .h-screen {
     height: 100vh;
   }
@@ -796,6 +799,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -1425,6 +1431,9 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-neutral-800 {
+    background-color: var(--color-neutral-800);
+  }
   .bg-neutral-800\/70 {
     background-color: color-mix(in oklab, var(--color-neutral-800) 70%, transparent);
   }
@@ -1608,6 +1617,9 @@
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
+  }
+  .p-9 {
+    padding: calc(var(--spacing) * 9);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
