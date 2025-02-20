@@ -147,9 +147,7 @@ h2{
 
     .hero{
         display: block;
-        background: rgb(50, 47, 47, 0.3);
+        background-color: rgb(245, 245, 220, 0.5);
     }
-    .hero span:first-child{
-        background-color: none;
-    }
+    
 }
