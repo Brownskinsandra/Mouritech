@@ -3,29 +3,26 @@ name: Deploy TailwindCSS Site
 on:
   push:
     branches:
-      - main  # Change this if your branch name is different
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18  # Use the version you prefer
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
 
-      - name: Install Dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Build TailwindCSS
-        run: npm run build  # Ensure your package.json has a "build" script
+    - name: Grant execute permissions to tailwindcss
+      run: chmod +x ./node_modules/.bin/tailwindcss
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages  # The branch where the built files will be stored
-          folder: dist  # Change to the correct build output folder
+    - name: Build TailwindCSS
+      run: npm run build
